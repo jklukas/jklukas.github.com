@@ -1,0 +1,110 @@
+/* h1, h2, h3, h4, h5, h6 { */
+/*     font-family: Raleway, Helvetica */
+/* } */
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: 'Cabin';
+    font-size: 100%;
+    color: white;
+    background: #060b11 url(../images/bg.jpg) no-repeat 0 0;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    color: white;
+    /* color: #DD4A40; */
+}
+h2 {margin: 0.5em 0 0.25em 0;}
+h3 {margin: 0.75em 0 0.25em 0;}
+
+p {
+    color: CCC;
+    text-align: justify;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+    border-bottom: 1px dotted;
+    -webkit-transition: color 0.5s linear;
+    -moz-transition: color 0.5s linear;
+}
+a:hover {
+    color: #DD4A40;
+}
+
+.accent {
+    color: #DD4A40;
+}
+
+.caption {
+    font-family: 'Indie Flower';
+    text-align: center;
+    font-size: 1.25em;
+}
+
+/********************/
+/* Contact list     */
+/********************/
+
+.contacts {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.contacts li {
+    padding-left: 23px;
+    background: url('') left center no-repeat;
+}
+
+/********************/
+/* Style the header */
+/********************/
+
+.jek {
+    font-family: "Cabin Sketch", Raleway, Helvetica;
+    text-align: right;
+    color: white;
+    font-size: 600%;
+    padding: 0;
+    margin: 0;
+    /* background-color: black; */
+    /* padding: 1em 1em 1em 1em; */
+    /* font-size: 8em; */
+}
+
+/********************/
+/* Navigation       */
+/********************/
+
+ul#navigation {
+    font-family: 'Crimson Text';
+    font-style: italic;
+    font-size: 150%;
+    text-align: right;
+    margin: 0 0 40px 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul#navigation li {
+    display: inline;
+    padding: 0 0 0 50px;
+}
+
+ul#navigation li a {
+    border: 0px;
+    color: #DD4A40;
+}
+
+ul#navigation li a:hover {
+    color: white;
+}
+
+ul#navigation li a.active {
+    color: white;
+}

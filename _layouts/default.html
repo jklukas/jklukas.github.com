@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link rel="shortcut icon" href="/favicon.png"> 
+  <link href="http://fonts.googleapis.com/css?family=Cabin+Sketch:bold" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Cabin:regular,regularitalic" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Crimson+Text:regular,regularitalic" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/blueprint/screen.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="/css/blueprint/print.css" type="text/css" media="print"> 
+  <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/css/blueprint/ie.css" type="text/css" media="screen, projection">
+  <![endif]-->
+  <link rel="stylesheet" href="/css/jek.css" type="text/css" media="screen, projection, print">
+  <title>{{ page.title }} | Jeff Klukas</title>
+</head>
+
+<body>
+
+<div class="container">
+  <div id="header" class="span-24 last">
+
+    <h1 class="jek" style="margin-top: 80px;">Jeff Klukas</h1>
+    <hr/ style="padding:0; margin:5px 0 5px 0;">
+
+    <ul id="navigation">
+      {% assign pages_list = site.pages %}  
+      {% include helpers/pages_list.html %}
+    </ul>
+
+  </div>
+</div>
+  
+<div class="container">
+  {{ content }}
+</div>
+
+</body>
+</html>
