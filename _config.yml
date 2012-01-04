@@ -3,7 +3,7 @@ auto: true
 pygments: true
 markdown: maruku
 maruku:
-  use_tex:    false
+  use_tex:    true
   use_divs:   true
   png_engine: blahtex
   png_dir:    images/latex
