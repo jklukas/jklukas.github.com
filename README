@@ -1,1 +1,4 @@
-I need to add stuff to this README file.
+To test the site, use this shell command:
+   jekyll --pygments --safe --server
+
+Then view the results at `http://localhost:4000/`.
