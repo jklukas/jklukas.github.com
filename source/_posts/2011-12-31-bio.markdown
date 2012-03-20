@@ -1,0 +1,39 @@
+---
+layout: post
+date: 2011-12-31 20:53
+comments: true
+categories: Pages
+permalink: /bio
+---
+
+<div class="imgcontainer">
+<iframe style="width: 100%; height: 20.5em; margin: 0.25em 0;" scrolling="no" src="http://maps.google.com/maps/ms?ie=UTF8&amp;t=h&amp;msa=0&amp;msid=201747899667285679972.0004a4bade8b09a0fa795&amp;ll=36.879621,-34.804687&amp;spn=55.146624,164.882813&amp;z=2&amp;output=embed"></iframe>
+<p>places I've lived</p>
+</div>
+
+Although I'm actually an Ohio native, I grew up in the South Hills of Pittsburgh (which, make no mistake, is [a Midwestern city](http://en.wikipedia.org/wiki/Midwestern_United_States#Cultural_overlap) despite being in Pennsylvania).  My parents, who both grew up as good Lutheran kids, met in college at [Wittenberg University](http://www.wittenberg.edu), and despite showing impressive restraint during my college search, were both quite happy to see me follow tradition by attending their alma mater.
+
+<!-- more -->
+
+At Wittenberg, I fully embraced the liberal arts philosophy by casting a wide net with my studies and delaying a choice of major until the last possible moment.  I managed to straddle the divide between the humanities and the sciences for a while by pursuing majors in both physics and French language and literature.  The French studies took me on a sidetrack to [Senegal](http://en.wikipedia.org/wiki/Senegal) for a semester of studying language, art, and culture in Dakar.  Back in Springfield, my extracurricular activities included the production of a moderately embarrasing [acoustic rock album](http://jeffklukas.bandcamp.com/).
+
+<div class="imgcontainer">
+<img src="/images/cms-hat470.jpg" alt="In the CMS cavern">
+<p>in the CMS Cavern</p>
+</div>
+
+During my time at Wittenberg, I started to become more aware of my appreciation for the good work being done by my professors and the enjoyment of struggling to communicate new ideas to those on the great journey of learning physics.  Those experiences led me to graduate school to prepare for a career in teaching and research.  I moved to Madison, WI to pursue a physics Ph.D., and was immediately seduced by the field of experimental particle physics and the promises it held of international collaboration and travel.  As a result, I became involved with the [Compact Muon Solenoid experiment](http://cms.cern.ch/), one of the main detectors at the [Large Hadron Collider](http://public.web.cern.ch/public/en/lhc/lhc-en.html) on the French/Swiss border.  I am currently involved in validation work for the experiment's muon trigger system as well as analysis focused on the physics of [W and Z bosons](http://en.wikipedia.org/wiki/W_and_Z_bosons).
+
+If I've learned anything from graduate school, it's that there are two things I really enjoy professionally: teaching and programming.  I expected to love teaching, but I never predicted how much my research work would involve coding and how interesting that process could be.  My research work is all about problem solving in the context of huge datasets, hunting for underlying structure that can yield clarity from chaos.  There is a great deal of creativity that goes into writing the analysis software that can make those investigations possible, and I have been as excited about discovering the capabilities of our software tools as I have about the physics results we can gain from applying them.  Now, I look at everything as a possible coding project, pondering which tools could be applied to a problem and how to most elegantly stitch them together.  I have at least four grand ideas for this site alone as I struggle with the limitations of its current framework.  If you have not yet discovered the joy of programming, learn some [python](http://docs.python.org/tutorial/); it makes me smile.
+
+<div class="imgcontainer">
+<img src="/images/upnorth.jpg">
+<p>the family in the UP</p>
+</div>
+
+In 2007, I married Karen Obee, my college sweetheart and a native of Toledo, OH.  Life got significantly more complicated and exciting in 2011 with the birth of our daughter, Emilia.  She's a hoot.  Karen is currently working at Edgewood College in student affairs.
+
+During my time in Madison, I pursued professional development in teaching through the [Delta program in Research, Teaching, and Learning](http://delta.wisc.edu/). I developed [a workshop on facilitating cooperative group work](/teaching/) for instructors, which I've presented in various contexts at UW-Madison and at CU-Boulder through Delta's exchange program.  I have also been a teaching assistant for both calculus-based and algebra-based physics at Madison and taught the physics portion of [the university's MCAT preparation course](http://www.prehealth.wisc.edu/apply/uw_mcat.html) for two years.
+
+During the 2010-2011 academic year, I had the opportunity to more seriously pursue my teaching ambitions with a lecturing position at he Univeristy of Wisconsin - Whitewater.  I received some great mentoring from the physics faculty there and got to experience the full responsibility of developing and administering my own courses.
+

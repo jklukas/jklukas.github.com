@@ -1,2 +1,190 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+html {
+    background: #060b11 url(/images/header-background.jpg) no-repeat 0 0;
+}
+
+body > header {
+    text-align: right;
+    h1 {
+      font-family: "Cabin Sketch";
+      font-size: 4.5em;
+    }
+    padding-top: 3em;
+    padding-bottom: 0.5em;
+    background: transparent;
+    hgroup {background: transparent;}
+}
+
+body > nav {
+    border: 0px;
+    /* position: absolute; */
+    top: 0px;
+    background: #060b11;
+    /* width: 100%; */
+    a, a:visited, a:hover {
+        color: #DDD;
+        text-shadow: #CCC 0px 1px 0px;
+        text-shadow: none;
+    }
+    ul {
+        float: right;
+    }
+}
+
+.entry-content a {
+    color: inherit;
+    text-decoration: inherit;
+    border-bottom: 1px dotted;
+    -webkit-transition: color 0.5s linear;
+    -moz-transition: color 0.5s linear;
+}
+.entry-content a:visited {
+    color: inherit;
+}
+.entry-content a:hover {
+    color: #DD4A40;
+}
+
+.entry-content p {
+    text-align: justify;
+}
+
+.entry-content dl {
+    margin-bottom: 1em;
+    dt, dd {display: inline;}
+    dt {
+        font-family: Cabin;
+        font-weight: bold;
+        color: #DD4A40;
+    }
+    dd:before {content: '\00B7' ' ';}
+}
+
+body.sidebar-footer aside.sidebar {
+    background: transparent;
+    border: 0;
+}
+
+#main {
+    background: transparent;
+}
+
+#content {
+    background: transparent;
+    border: 0;
+}
+
+body > aside.sidebar {
+    background: transparent;
+}
+
+body > footer {
+    background: transparent;
+    border: 0;
+    text-shadow: 0px;
+    color: #ccc;
+    a {color: #ccc;}
+    a:visited {color: #ccc;}
+}
+
+article img {
+    border: 0;
+    margin-top: 0.25em;
+}
+
+div#main {
+    border: 0;
+}
+
+.width25 {
+    width: 25em;
+    max-width: 100%;
+}
+
+.shadow {
+    -moz-box-shadow:    3px 3px 5px 6px rgba(25,25,25,0.5);
+    -webkit-box-shadow: 3px 3px 5px 6px rgba(25,25,25,0.5);
+    box-shadow:         3px 3px 5px 6px rgba(25,25,25,0.5);
+}
+
+.contacts {
+    list-style-type: none;
+    padding-left: 0px;
+    /* margin-left: 30em; */
+}
+
+.google:before {content: url('/images/google.png') " ";}
+.skype:before {content: url('/images/skype.png') " ";}
+.gmail:before {content: url('/images/gmail.png') " ";}
+
+.imgcontainer {
+    font-family: "Indie Flower";
+    text-align: center;
+    width: 100%;
+    margin: 0em auto;
+    p {text-align: center;}
+    img, iframe {
+        max-width:100%;
+        -moz-box-shadow:    3px 3px 5px 6px rgba(25,25,25,0.5);
+        -webkit-box-shadow: 3px 3px 5px 6px rgba(25,25,25,0.5);
+        box-shadow:         3px 3px 5px 6px rgba(25,25,25,0.5);
+    }
+}
+
+@media only screen and (min-width:700px) {
+    .imgcontainer {
+        float: left;
+        width: 25em;
+        margin: 0em 1em 0 0;
+    }
+}
+
+.threecol-one, .threecol-two, .threecol-three {
+    width: 100%;
+    img {
+        width: 200px;
+        float: left;
+        margin: 0.5em 1em 1em 0;
+    }
+}
+
+@media only screen and (min-width:800px) {
+    .threecol-one, .threecol-two, .threecol-three {
+        width: 30%;
+        float: left;
+        img {
+            width: 100%;
+            float: none;
+        }
+    }
+    .threecol-one, .threecol-two {margin-right: 5%;}
+}
+
+
+
+/* .entry-content p { */
+/*     margin-left: 30em; */
+/*     text-align: justify; */
+/* } */
+
+/* article header { */
+/*     /\* margin-left: 30em; *\/ */
+/*     background-color: rgba(100,100,100,0.5); */
+/* } */
+
+/* .entry-content { */
+/*     h1 { */
+/*         float: left; */
+/*         width: 25em; */
+/*     } */
+/* } */
+
+/* body > nav { */
+/*     position: absolute; */
+/*     top: 0px; */
+/*     background: #060b11; */
+/*     margin-left: auto; */
+/*     width: 100%; */
+/* } */

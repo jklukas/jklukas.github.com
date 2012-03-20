@@ -1,0 +1,51 @@
+---
+layout: post
+title : Teaching
+categories: Pages
+permalink: /teaching
+---
+
+## Courses
+
+###Physics for Elementary Teachers
+An introductory course built around a student-oriented pedagogy where almost all the course concepts are developed through direct experimentation in groups.  It focuses on building a conceptual understanding of energy and forces and using those concepts as a framework for understanding gravity, magnetism, electricity, and light.   The course becomes particularly relevant for elemetary teachers through "Learning about Learning" activities where we observe and discuss the learning processes of elementary students.
+
+###Physics Foundations
+An overview of physics in one semester, covering a broad range of topics, from Newtonian mechanics to relativity and particles.  We use algebra to develop a quantitative understanding of the topics and laboratory activities to explore a few of them in greater depth.
+
+<!--- more --->
+
+###How to Facilitate Cooperative Group Learning?
+
+<div class="imgcontainer" style="float: none; margin: 0px auto; width=100%; border: none;">
+<iframe style="width: 420px; height: 315px; padding: 0px; border: 0px;" scrolling="no" src="http://www.youtube.com/embed/D5DnqgNFmXc" frameborder="0"></iframe>
+<p>video developed for my CGL training workshop</p>
+</div>
+
+The physics education literature has repeatedly demonstrated the
+effectiveness of active leaning techniques over traditional
+lecture-based teaching. One active learning strategy currently gaining
+popularity at the University of Wisconsin is the use of cooperative
+group work in discussion sections. To encourage adoption and increase
+effectiveness, however, teaching assistants must have some training to
+understand the benefits of group work and to develop a sense of how
+best to design activities to capitalize on the social aspects of group
+work.
+
+In response to this need, we have developed a workshop for TAs on
+cooperative groups.  In the workshop, we establish the benefits of
+active learning techniques through a review of literature and
+introductory exercises that expose the participants' own abilities to
+learn without understanding.  We then address several practical and
+social obstacles to leading a successful group work session through a
+video presentation and role-playing activity where participants must
+resolve simulated problems in the group-based classroom.  Throughout,
+we rely on small group discussions among the participants to model the
+approach we are presenting and to capitalize on the diversity of
+experience that the participants bring to the workshop.
+
+###Workshop Materials
+Watch the video ["Cooperative Group Work in the Field" on YouTube](http://youtube.com/watch?v=YnHl2rjloqo) (embedded above).
+
+###Resources
+[Videos from the University of Colorado Science Education Initiative](http://stemvideos.colorado.edu/)
