@@ -94,7 +94,7 @@ Muon Trigger Isolation Optimization
 
 [jeff.klukas.net](http://jeff.klukas.net)
 : Used as a testing ground for site design using modern web standards, font technologies, and design principles
-: Currently based on Jekyll platform, hosted on Github
+: Currently powered by Octopress, using Jekyll, HTML5, and SASS in an adaptive design, hosted on Github
 ^
 
 ##Skills
@@ -132,6 +132,7 @@ Young Scientist Communication Grant
 : 2012
 : Awarded to participants at the 2011 US LHC Users' Organization Annual Meeting to graduate students whose talks showed exceptional ability to communicate with the public
 : Traveled with senior scientists on an annual trip to Washington, D.C. to speak with members of Congress about funding for science
+^
 
 CIRTL Network Exchange Fellow
 : 2010
@@ -151,7 +152,7 @@ Delta Certificate in Research, Teaching, & Learning
 : Recognizing experience in educational research and knowledge of foundational scholarship on teaching and learning
 ^
 
-Emanuel R.{} Piore Award
+Emanuel R. Piore Award
 : 2007
 : UW--Madison
 : Recognizing top score on the physics graduate qualifying exam
@@ -162,7 +163,7 @@ Emanuel R.{} Piore Award
 Search for exotic particles decaying to the WZ final state with the CMS Experiment
 : The CMS Collaboration
 : 2012
-: *Pending collaboration approval for submission to Phys. Rev. Letters*
+: *Pending collaboration approval for submission to Physical Review Letters*
 ^
 
 Search for W' (or techni-rho) to WZ
