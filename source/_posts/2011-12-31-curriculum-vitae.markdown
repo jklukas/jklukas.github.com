@@ -9,9 +9,9 @@ permalink: /cv
 ## Education
 
 Ph.D. (Physics) University of Wisconsin--Madison
-: May 2012 (anticipated)
+: May 2012
 : Advisor: Matt Herndon
-: Thesis topic: Search for exotic *WZ* resonances with leptonic decays in *pp* collisions at 7 TeV
+: Thesis topic: A search for exotic particles decaying to *WZ* in *pp* collisions at 7 TeV
 ^
 
 B.S. Wittenberg University
