@@ -12,4 +12,4 @@ Abstract: A search for exotic particles decaying via *WZ* to final states with e
 
 I have a goal of putting up the [LaTeX source on GitHub](https://github.com/jklukas/gradthesis) (partially completed), along with a [style file](https://github.com/jklukas/uwthesis) that should be reuasable for others preparing a UW-Madison dissertation.
 
-You can read in the document in the [official double-spaced format](/files/klukas-thesis-onecol.pdf), a [nicely printable two-column format](/files/klukas-thesis-twocol.pdf), or a [single-spaced trade-size format](/files/klukas-thesis-trade.pdf) that I used to print copies via [lulu.com](http://lulu.com).
+You can read the document in the [official double-spaced format](/files/klukas-thesis-onecol.pdf), a [nicely printable two-column format](/files/klukas-thesis-twocol.pdf), or a [single-spaced trade-size format](/files/klukas-thesis-trade.pdf) that I used to print copies via [lulu.com](http://lulu.com).
