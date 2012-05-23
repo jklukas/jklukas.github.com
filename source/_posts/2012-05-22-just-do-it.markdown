@@ -1,0 +1,14 @@
+---
+layout: post
+title: "Just Do It"
+date: 2012-05-22 15:27
+comments: true
+categories: 
+---
+
+* Made $300 in one morning by doing some hacking in response to a blog post.
+* Rebuilt ac-aa.org in Wordpress so that minor changes can be handled by members of the community rather than having to go through me.
+* Learned the basics of MVC web apps and Ruby on Rails
+* Attended some meetups to get involved with the community.
+* Cleaned up the source code for my thesis and published a LaTeX style configuration on Github that I hope other UW dissertators will use to make their lives easier.
+
