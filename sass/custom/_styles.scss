@@ -66,6 +66,10 @@ body.sidebar-footer aside.sidebar {
     border: 0;
 }
 
+/* aside.sidebar { */
+/*     @include box-shadow(inset rgba(25,25,25,0.5) 0 0 10px); */
+/* } */
+
 #main {
     background: transparent;
 }
@@ -103,9 +107,10 @@ div#main {
 }
 
 .shadow {
-    -moz-box-shadow:    3px 3px 5px 6px rgba(25,25,25,0.5);
-    -webkit-box-shadow: 3px 3px 5px 6px rgba(25,25,25,0.5);
-    box-shadow:         3px 3px 5px 6px rgba(25,25,25,0.5);
+    @include box-shadow(rgba(25,25,25,0.5) 3px 3px 5px 6px);
+    /* -moz-box-shadow:    3px 3px 5px 6px rgba(25,25,25,0.5); */
+    /* -webkit-box-shadow: 3px 3px 5px 6px rgba(25,25,25,0.5); */
+    /* box-shadow:         3px 3px 5px 6px rgba(25,25,25,0.5); */
 }
 
 .contacts {
