@@ -43,13 +43,11 @@ aside.sidebar {
 }
 
 body > nav {
-    @include border-radius(.4em);
     margin-bottom: 1em;
-    /* background: #F2F2F2; */
-    /* position: absolute; */
-    /* top: 0; */
-    /* left: 0; */
-    /* right: 0; */
+}
+
+body > footer {
+    margin-top: 1em;
 }
 
 body > header {
@@ -99,12 +97,13 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     width: 100%;
     margin: 0em auto;
     p {text-align: center;}
-    img, iframe {
-        max-width:100%;
-        -moz-box-shadow:    3px 3px 5px 6px rgba(25,25,25,0.5);
-        -webkit-box-shadow: 3px 3px 5px 6px rgba(25,25,25,0.5);
-        box-shadow:         3px 3px 5px 6px rgba(25,25,25,0.5);
-    }
+    /* img { */
+    /*     background: white; */
+    /*     max-width:100%; */
+    /*     -moz-box-shadow:    3px 3px 5px 6px rgba(25,25,25,0.5); */
+    /*     -webkit-box-shadow: 3px 3px 5px 6px rgba(25,25,25,0.5); */
+    /*     box-shadow:         3px 3px 5px 6px rgba(25,25,25,0.5); */
+    /* } */
 }
 
 /*  Font Awesome
