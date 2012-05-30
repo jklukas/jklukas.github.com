@@ -3,6 +3,7 @@
 
 html {
     background: #14283C;
+    /* convert -size 200x200 canvas:'#14283C' +noise Gaussian source/images/bluenoise.png */
     @include background-image(image-url("/images/bluenoise.png")
                         /* ,radial-gradient(center 8em, ellipse closest-corner, rgba(255,255,255,0.2), rgba(255,255,255,0.0)) */
                        );
