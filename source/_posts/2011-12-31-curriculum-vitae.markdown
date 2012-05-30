@@ -29,7 +29,7 @@ School for International Training
 : Conducted independent research on the relative importance of national, ethnic, socioeconomic, and gender identities to residents of Dakar through interviews and participant observation.
 ^
 
-<!--- more --->
+<!-- more -->
 
 ##Employment Experience
 
@@ -109,19 +109,19 @@ Computer languages
 : Python
 : C++
 : UNIX shell
-: HTML/CSS
-: TeX/LaTeX/XeTeX
+: HTML5/CSS3
+: TeX/LaTeX
 ^
 
 Applications
 : [ROOT](http://root.cern.ch) (statistics software)
 : matplotlib
-: CVS, Subversion, Git, Mercurial
+: CVS/Subversion/Git/Mercurial
 : Sphinx
 ^
 
 Operating systems
-: Scientific Linux (5 years)
+: Scientific Linux
 : Mac OS X
 : Windows
 ^

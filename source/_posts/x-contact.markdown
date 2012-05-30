@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: none
 date: 2020-12-31
 comments: true
 categories: Pages

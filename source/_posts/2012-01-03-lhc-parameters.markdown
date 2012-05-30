@@ -13,11 +13,15 @@ $$\gamma = {1 \over \sqrt{1 - \beta^2}} \rightarrow \beta = \sqrt{1 - {1 \over \
 
 Alright, now let's look at the collision rate, assuming a recent luminosity of 1e33:
 
-$$R_\text{total} = \mathcal{L} \sigma = (10^{33} {\text{cm}^{-2} \over \text{s}})(110\text{mb})({10^{-27}\text{cm}^2 \over \text{mb}}) \approx 100 \text{MHz of interactions}$$
+$$R_\text{total} = \mathcal{L} \sigma = (10^{33} {\text{cm}^{-2} \over \text{s}})(110\text{mb})({10^{-27}\text{cm}^2 \over \text{mb}})$$
 
-The cross section for the events I'm looking at is $ \sigma_{WZ\rightarrow 3\ell\nu} \approx 0.5 \text{pb}$, so
+which gives approximately 100 million interactions per second.
 
-$$R(WZ\to 3\ell\nu) = (10^{33} {\text{cm}^{-2} \over \text{s}})(0.5\text{pb})({10^{-36}\text{cm}^2 \over \text{mb}}) = 0.0005 \text{Hz} = \text{40 per day}$$
+The cross section for the events I'm looking at is $\sigma_{WZ\rightarrow 3\ell\nu} \approx 0.5 \text{pb}$, so
+
+$$R(WZ\to 3\ell\nu) = (10^{33} {\text{cm}^{-2} \over \text{s}})(0.5\text{pb})({10^{-36}\text{cm}^2 \over \text{mb}})$$
+
+yielding 0.0005 Hz or 40 *WZ* events per day.
 
 So how many of these events will we have collected by the end of the 2011 pp run?
 
