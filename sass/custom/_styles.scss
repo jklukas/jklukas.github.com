@@ -2,7 +2,17 @@
 // Add styles here to make changes without digging in too much
 
 html {
-    background: #060b11 url(/images/header-background.jpg) no-repeat 0 0;
+    /* background: #060b11 url(/images/header-background.jpg) no-repeat 0 0; */
+    background-color: #060b11;
+    /* convert -size 200x200 canvas:'#214263' +noise Gaussian bluenoise.png */
+    background: url(/images/bluenoise.png);
+}
+
+body {
+    /* @include background-image( */
+    /*     radial-gradient(center, ellipse cover, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.0) 70%) */
+    /*     /\* radial-gradient(45px 45px, aqua 10px, #1e90ff 30px) *\/ */
+    /* ); */
 }
 
 body > header {
@@ -15,6 +25,12 @@ body > header {
     padding-bottom: 0.5em;
     background: transparent;
     hgroup {background: transparent;}
+    /* background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%); */
+    /* background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.5)), color-stop(70%,rgba(255,255,255,0))); */
+    /* background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); */
+    /* background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); */
+    /* background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); */
+    /* background: radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); */
 }
 
 body > nav {
