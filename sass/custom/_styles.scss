@@ -4,8 +4,8 @@
 html {
     background: #14283C;
     /* convert -size 200x200 canvas:'#14283C' +noise Gaussian source/images/bluenoise.png */
-    @include background-image(image-url("/images/bluenoise.png")
-                        /* ,radial-gradient(center 8em, ellipse closest-corner, rgba(255,255,255,0.2), rgba(255,255,255,0.0)) */
+    @include background-image(
+        radial-gradient(center 8em, ellipse closest-corner, rgba(255,255,255,0.2), rgba(255,255,255,0.0)),image-url("/images/bluenoise.png")
                        );
     /* background-image: url("images/bluenoise.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(247,148,34,0)), to(#dc7703)); */
     /* background-image: url("images/bluenoise.png"), -webkit-linear-gradient(-90deg, rgba(247,148,34,0), #dc7703); */
@@ -14,9 +14,9 @@ html {
 }
 
 body {
-    @include background-image(
-        radial-gradient(center 8em, ellipse closest-corner, rgba(255,255,255,0.2), rgba(255,255,255,0.0))
-    );
+    /* @include background-image( */
+    /*     radial-gradient(center 8em, ellipse closest-corner, rgba(255,255,255,0.2), rgba(255,255,255,0.0)) */
+    /* ); */
     color: #bbb;
 }
 
@@ -92,19 +92,28 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     dd:before {content: '\00B7' ' ';}
 }
 
+article img {
+    background: white;
+}
+
 .imgcontainer {
     font-family: "Indie Flower";
     text-align: center;
     width: 100%;
     margin: 0em auto;
     p {text-align: center;}
-    /* img { */
-    /*     background: white; */
-    /*     max-width:100%; */
-    /*     -moz-box-shadow:    3px 3px 5px 6px rgba(25,25,25,0.5); */
-    /*     -webkit-box-shadow: 3px 3px 5px 6px rgba(25,25,25,0.5); */
-    /*     box-shadow:         3px 3px 5px 6px rgba(25,25,25,0.5); */
-    /* } */
+    img {
+        max-width:100%;
+        /* -moz-box-shadow:    3px 3px 5px 6px rgba(25,25,25,0.5); */
+        /* -webkit-box-shadow: 3px 3px 5px 6px rgba(25,25,25,0.5); */
+        /* box-shadow:         3px 3px 5px 6px rgba(25,25,25,0.5); */
+    }
+}
+
+#content .blog-index article h1, #blog-archives h1 {
+    a:hover {
+        color: #dd4a40;
+    }
 }
 
 /*  Font Awesome

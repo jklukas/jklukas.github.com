@@ -6,7 +6,7 @@ comments: true
 categories: Projects
 ---
 
-<a href="http://packages.python.org/rootplot"><img class="right" src="http://packages.python.org/rootplot/_static/rootplot-logo.png"></a>
+<a href="http://packages.python.org/rootplot"><img class="right" style="border: 0; background: none;" src="http://packages.python.org/rootplot/_static/rootplot-logo.png"></a>
 
 ROOT is a powerful data analysis tool within the particle physics community, and the primary lens through which we see our data. The framework includes quite a bit of graphical capability, but this has understandably not been the first priority in designing its capabilities or its interface.  By exploiting the pyROOT interface to the Python interpreter, I created the [RootPlot package](http://packages.python.org/rootplot) to provide scripts and libraries to make working with the graphical side of ROOT easier.
 

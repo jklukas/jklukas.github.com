@@ -7,8 +7,8 @@ categories: Projects
 ---
 
 <div class="imgcontainer">
-<img src="/images/acaasnapshot350.png" style="width=350;" alt="Snapshot of ac-aa.org">
+<a href="http://ac-aa.org"><img src="/images/acaasnapshot768x1024.png" style="width:384px; height:512px;" alt="Snapshot of ac-aa.org"></a>
 <p>Snapshot of ac-aa.org</p>
 </div>
 
-I maintain the web prescence of Agricultural Communities for Adults with Autism, a consortium of organizations focused on sharing best practices for holistic, agricultural based employment and housing modles for adults with autism.
+I maintain the web prescence of <a href="http://ac-aa.org">Agricultural Communities for Adults with Autism</a>, a consortium of organizations focused on sharing best practices for holistic, agricultural based employment and housing modles for adults with autism.
