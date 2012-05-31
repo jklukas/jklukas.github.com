@@ -15,7 +15,8 @@
           , type: 'jsonp'
           , error: function (err) { $('#twitter-profile').addClass('error');  }
           , success: function(data) {
-              container.html('<img class="left" src="http://api.twitter.com/1/users/profile_image/'+user+'.json?size=bigger" alt="@'+user+'"><p><strong>'+data.name+'</strong><br/>('+data.location+')</p><p style="clear:both;">'+data.description+'</p>');
+              container.html('<img class="left" src="/images/jeff184.jpg" alt="@'+user+'" style="width:100px; height:100px;"><p><strong>'+data.name+'</strong><br/>('+data.location+')</p><p style="clear:both;">'+data.description+'</p>');
+              <!-- container.html('<img class="left" src="http://api.twitter.com/1/users/profile_image/'+user+'.json?size=bigger" alt="@'+user+'"><p><strong>'+data.name+'</strong><br/>('+data.location+')</p><p style="clear:both;">'+data.description+'</p>'); -->
             }
         })
       });
