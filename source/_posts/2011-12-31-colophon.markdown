@@ -6,6 +6,17 @@ categories: Pages
 permalink: /colophon
 ---
 
-This site is built on the [Jekyll](http://jekyllrb.com) blogging platform, hosted on [Github Pages](http://pages.github.com).  Many of the bells and whistles come courtesy of [Octopress](http://octopress.org), a Jekyll-powered framework.  I just make changes to the source for the site and Github takes care of running Jekyll when I push changes to them.  In this new configuration, the blogging stuff is integrated with the rest of the site; previously I had a Wordpress blog that I included as an iframe element, but that's rather clunky.
+This site is built on [Octopress](http://octopress.org), "a blogging framework for hackers," which brings a number of fun technologies along for the ride, including:
 
-In addition, I am rendering LaTeX using [MathJax](http://www.mathjax.org/), which simply requires the inclusion of a javascript snippet in the head of the page.
+* [Jekyll](http://jekyllrb.com) as the base platform for generating a static blog,
+* modern design using all the best that HTML5 and CSS3 have to offer,
+* the [Modernizr](http://modernizr.com/) JS library to allow for graceful degradation on older browsers,
+* a responsive, mobile-first page design (try resizing the browser window to see what happens), and
+* scripts to automate deployment to GitHub Pages.
+
+On top of Octopress, I threw in some extra goodies:
+
+* A retina-ready design with CSS3 gradients, scalable icons from FontAwesome and images included at 2x whenever possible so that the page looks as crisp as possible on recent iPhones and iPads, plus
+* [MathJax](http://www.mathjax.org/) for rendering of LaTeX equations in HTML.
+
+Check out the [site's source](https://github.com/jklukas/jklukas.github.com) on GitHub.
