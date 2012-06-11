@@ -4,11 +4,7 @@ title: "Just Do It"
 date: 2012-05-22 15:27
 comments: true
 categories: 
+published: false
 ---
 
-* Made $300 in one morning by doing some hacking in response to a blog post.
-* Rebuilt ac-aa.org in Wordpress so that minor changes can be handled by members of the community rather than having to go through me.
-* Learned the basics of MVC web apps and Ruby on Rails
-* Attended some meetups to get involved with the community.
-* Cleaned up the source code for my thesis and published a LaTeX style configuration on Github that I hope other UW dissertators will use to make their lives easier.
-
+One of the most exciting parts of working with software is the power it gives you to conceive an idea and quickly make it a reality.  Having just a basic set of programming tools allows you to tackle problems across a variety of domains, and looking at the level of activity some people are able to achieve is daunting.  One of my biggest stumbling blocks is that.
