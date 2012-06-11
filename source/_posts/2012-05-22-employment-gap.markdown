@@ -13,4 +13,4 @@ Starting a new job with [Epic](http://epic.com) on Monday, working with their Se
 * Learned the basics of MVC web apps and Ruby on Rails, inspired by the prodding of some of the good folks at [Bendyworks](http://bendyworks.com).
 * Attended some Madison-area software meetups to get better acquainted with the local tech ecosystem.
 * Cleaned up the source code for my thesis and published a LaTeX style configuration on Github that I hope other UW dissertators will use to make their lives easier.
-
+* Updated the look of this site to be more stable and to better accomodate those nifty high-res displays.  I'm using [FontAwesome](http://fortawesome.github.com/Font-Awesome/) for icons in the sidebar and updated some images for double resolution.
