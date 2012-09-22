@@ -33,6 +33,12 @@ School for International Training
 
 ##Employment Experience
 
+Server Systems Engineer
+: Epic
+: Designed and maintained high-performance databases for medical records
+: Advised customers on system monitoring and scalability
+^
+
 Research Assistant
 : UW--Madison
 : 2007--2012
@@ -57,6 +63,11 @@ Teaching Assistant
 ^
 
 ##Programming Experience
+
+Web Applications
+: Developed an internal Stack Overflow-style Q&A site for Epic staff using Python/Django, based on the open source OSQA project
+: Monitored feedback to provide prompt fixes and feature enhancements to meet the needs of the user community
+^
 
 Muon Trigger Validation
 : Developed a suite of tools in C++ for testing trigger software critical to the collaboration, integrating it into the CMS software framework
@@ -99,6 +110,11 @@ Muon Trigger Isolation Optimization
 
 ##Skills
 
+Certifications
+: Junior level Linux certification (LPIC-101)
+: Certified in Caché system management for Epic installations
+^
+
 Global languages
 : English (native)
 : French (advanced)
@@ -108,9 +124,10 @@ Global languages
 Computer languages
 : Python
 : C++
-: UNIX shell
+: UNIX shell scripting
 : HTML5/CSS3
 : TeX/LaTeX
+: M/MUMPS
 ^
 
 Applications
@@ -122,6 +139,8 @@ Applications
 
 Operating systems
 : Scientific Linux
+: AIX
+: HP-UX
 : Mac OS X
 : Windows
 ^
