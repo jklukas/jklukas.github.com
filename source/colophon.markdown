@@ -1,0 +1,21 @@
+---
+layout: post
+comments: true
+categories: [Pages]
+permalink: /colophon/
+---
+
+This site is built on [Octopress](http://octopress.org), "a blogging framework for hackers," which brings a number of fun technologies along for the ride, including:
+
+* [Jekyll](http://jekyllrb.com) as the base platform for generating a static blog,
+* modern design using all the best that HTML5 and CSS3 have to offer,
+* the [Modernizr](http://modernizr.com/) JS library to allow for graceful degradation on older browsers,
+* a responsive, mobile-first page design (try resizing the browser window to see what happens), and
+* scripts to automate deployment to GitHub Pages.
+
+On top of Octopress, I threw in some extra goodies:
+
+* A retina-ready design with CSS3 gradients, scalable icons from FontAwesome and images included at 2x whenever possible so that the page looks as crisp as possible on recent iPhones and iPads, plus
+* [MathJax](http://www.mathjax.org/) for rendering of LaTeX equations in HTML.
+
+Check out the [site's source](https://github.com/jklukas/jklukas.github.com) on GitHub.
