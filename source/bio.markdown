@@ -36,4 +36,4 @@ During my time in Madison, I pursued professional development in teaching throug
 
 During the 2010-2011 academic year, I had the opportunity to more seriously pursue my teaching ambitions with a lecturing position at he Univeristy of Wisconsin - Whitewater.  I received some great mentoring from the physics faculty there and got to experience the full responsibility of developing and administering my own courses.
 
-I'm currently exploring more of the possibilities of software and computing as they relate to healthcare at [Epic](http://epic.com).  On the server systems team, I'm helping hospitals deploy, monitor, and maintain high-performance databases.
+In recent years, I've been exploring more of the possibilities of software and computing as they relate to healthcare at banking first at [Epic](http://epic.com) and now at [Simple](https://simple.com).
