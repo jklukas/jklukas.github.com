@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Band-Aids"
+date: 2015-03-30 21:33:25 -0500
+comments: true
+categories:
+---
+
+Most of the sections in this site's sidebar stopped functioning at some point in the past two years, and I'm just now getting around to making updates. Security needs are ever-changing, so two years is far too long to expect a web API to remain functional. I'm applying some Band-Aids to get things functional again, and also edited some outdated content.
+
+I actually have some writing momentum building right now as I'm starting to author engineering posts for Simple. I have a first article on schema migrations in Amazon Redshift that's currently under review and will hopefully get published next week.
