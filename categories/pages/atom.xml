@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: pages | Jeff Klukas]]></title>
+  <link href="http://jeff.klukas.net/categories/pages/atom.xml" rel="self"/>
+  <link href="http://jeff.klukas.net/"/>
+  <updated>2015-11-06T09:14:27-05:00</updated>
+  <id>http://jeff.klukas.net/</id>
+  <author>
+    <name><![CDATA[Jeff Klukas]]></name>
+    <email><![CDATA[jeff@klukas.net]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Colophon]]></title>
+    <link href="http://jeff.klukas.net/colophon"/>
+    <updated>2011-12-31T20:53:00-05:00</updated>
+    <id>http://jeff.klukas.net/colophon</id>
+    <content type="html"><![CDATA[<p>This site is built on <a href="http://octopress.org">Octopress</a>, “a blogging framework for hackers,” which brings a number of fun technologies along for the ride, including:</p>
+
+<ul>
+  <li><a href="http://jekyllrb.com">Jekyll</a> as the base platform for generating a static blog,</li>
+  <li>modern design using all the best that HTML5 and CSS3 have to offer,</li>
+  <li>the <a href="http://modernizr.com/">Modernizr</a> JS library to allow for graceful degradation on older browsers,</li>
+  <li>a responsive, mobile-first page design (try resizing the browser window to see what happens), and</li>
+  <li>scripts to automate deployment to GitHub Pages.</li>
+</ul>
+
+<p>On top of Octopress, I threw in some extra goodies:</p>
+
+<ul>
+  <li>A retina-ready design with CSS3 gradients, scalable icons from FontAwesome and images included at 2x whenever possible so that the page looks as crisp as possible on recent iPhones and iPads, plus</li>
+  <li><a href="http://www.mathjax.org/">MathJax</a> for rendering of LaTeX equations in HTML.</li>
+</ul>
+
+<p>Check out the <a href="https://github.com/jklukas/jklukas.github.com">site’s source</a> on GitHub.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bio]]></title>
+    <link href="http://jeff.klukas.net/bio"/>
+    <updated>2011-12-31T20:53:00-05:00</updated>
+    <id>http://jeff.klukas.net/bio</id>
+    <content type="html"><![CDATA[<div class="imgcontainer">
+<iframe style="width: 100%; height: 20.5em; margin: 0.25em 0;" scrolling="no" src="http://maps.google.com/maps/ms?ie=UTF8&amp;t=h&amp;msa=0&amp;msid=201747899667285679972.0004a4bade8b09a0fa795&amp;ll=36.879621,-34.804687&amp;spn=55.146624,164.882813&amp;z=2&amp;output=embed"></iframe>
+<p>places I&#8217;ve lived</p>
+</div>
+
+<p>Although I’m actually an Ohio native, I grew up in the South Hills of Pittsburgh (which, make no mistake, is <a href="http://en.wikipedia.org/wiki/Midwestern_United_States#Cultural_overlap">a Midwestern city</a> despite being in Pennsylvania).  My parents, who grew up as good Lutheran kids, met in college at <a href="http://www.wittenberg.edu">Wittenberg University</a>, and both their kids ended up following suit.</p>
+
+<!-- more -->
+
+<p>At Wittenberg, I fully embraced the liberal arts philosophy by casting a wide net with my studies and delaying a choice of major until the last possible moment.  I managed to straddle the divide between the humanities and the sciences for a while by pursuing majors in both physics and French language and literature.  The French studies took me on a sidetrack to <a href="http://en.wikipedia.org/wiki/Senegal">Senegal</a> for a semester of studying language, art, and culture in Dakar.  Back in Springfield, my extracurricular activities included the production of a moderately embarrasing <a href="http://jeffklukas.bandcamp.com/">acoustic rock album</a>.</p>
+
+<div class="imgcontainer">
+<img src="http://jeff.klukas.net/images/cms-hat470.jpg" alt="In the CMS cavern" />
+<p>in the CMS Cavern</p>
+</div>
+
+<p>During my time at Wittenberg, I started to become more aware of my appreciation for the good work being done by my professors and the enjoyment of struggling to communicate new ideas to those on the great journey of learning physics.  Those experiences led me to graduate school to prepare for a career in teaching and research.  I moved to Madison, WI to pursue a physics Ph.D., and was immediately seduced by the field of experimental particle physics and the promises it held of international collaboration and travel.  As a result, I became involved with the <a href="http://cms.cern.ch/">Compact Muon Solenoid experiment</a>, one of the main detectors at the <a href="http://public.web.cern.ch/public/en/lhc/lhc-en.html">Large Hadron Collider</a> on the French/Swiss border.  My work focused on monitoring and validation of the experiment’s muon trigger system as well as analysis focused on the physics of <a href="http://en.wikipedia.org/wiki/W_and_Z_bosons">W and Z bosons</a>.</p>
+
+<p>If I’ve learned anything from graduate school, it’s that there are two things I really enjoy professionally: teaching and programming.  I expected to love teaching, but I never predicted how much my research work would involve coding and how interesting that process could be.  My research work is all about problem solving in the context of huge datasets, hunting for underlying structure that can yield clarity from chaos.  There is a great deal of creativity that goes into writing the analysis software that can make those investigations possible, and I have been as excited about discovering the capabilities of our software tools as I have about the physics results we can gain from applying them.  I now seem to look at everything as a possible coding project, pondering which tools could be applied to a problem and how to most elegantly stitch them together.  If you have not yet discovered the joy of programming, learn some <a href="http://docs.python.org/tutorial/">python</a>; it makes me smile.</p>
+
+<div class="imgcontainer">
+<img src="http://jeff.klukas.net/images/upnorth.jpg" />
+<p>the family in the UP</p>
+</div>
+
+<p>In 2007, I married Karen Obee, my college sweetheart and a native of Toledo, Ohio.  She loves the Mudhens and Lebanese food.  Life got significantly more complicated and exciting in 2011 with the birth of our daughter, Emilia.  She’s a hoot.  Karen is currently working at Edgewood College in student affairs.</p>
+
+<p>During my time in Madison, I pursued professional development in teaching through the <a href="http://delta.wisc.edu/">Delta program in Research, Teaching, and Learning</a>. I developed <a href="/teaching/">a workshop on facilitating cooperative group work</a> for instructors, which I’ve presented in various contexts at UW-Madison and at CU-Boulder through Delta’s exchange program.  I have also been a teaching assistant for both calculus-based and algebra-based physics at Madison and taught the physics portion of <a href="http://www.prehealth.wisc.edu/apply/uw_mcat.html">the university’s MCAT preparation course</a> for two years.</p>
+
+<p>During the 2010-2011 academic year, I had the opportunity to more seriously pursue my teaching ambitions with a lecturing position at he Univeristy of Wisconsin - Whitewater.  I received some great mentoring from the physics faculty there and got to experience the full responsibility of developing and administering my own courses.</p>
+
+<p>I’m currently exploring more of the possibilities of software and computing as they relate to healthcare at <a href="http://epic.com">Epic</a>.  On the server systems team, I’m helping hospitals deploy, monitor, and maintain high-performance databases.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Curriculum Vitae]]></title>
+    <link href="http://jeff.klukas.net/cv"/>
+    <updated>2011-12-31T02:53:00-05:00</updated>
+    <id>http://jeff.klukas.net/curriculum-vitae</id>
+    <content type="html"><![CDATA[<h2 id="education">Education</h2>
+
+<dl>
+  <dt>Ph.D. (Physics) University of Wisconsin–Madison</dt>
+  <dd>May 2012</dd>
+  <dd>Advisor: Matt Herndon</dd>
+  <dd>Thesis topic: A search for exotic particles decaying to <em>WZ</em> in <em>pp</em> collisions at 7 TeV</dd>
+</dl>
+
+<dl>
+  <dt>B.S. Wittenberg University</dt>
+  <dd>Springfield, Ohio</dd>
+  <dd>May 2006</dd>
+  <dd>Majors in physics and French language &amp; literature</dd>
+  <dd>Summa Cum Laude</dd>
+  <dd>Departmental honors in physics</dd>
+  <dd>Thesis topic: Influencing dynamics in neural networks</dd>
+</dl>
+
+<dl>
+  <dt>School for International Training</dt>
+  <dd>Dakar, Senegal, West Africa</dd>
+  <dd>Spring 2005</dd>
+  <dd>Conducted independent research on the relative importance of national, ethnic, socioeconomic, and gender identities to residents of Dakar through interviews and participant observation.</dd>
+</dl>
+
+<!-- more -->
+
+<h2 id="employment-experience">Employment Experience</h2>
+
+<dl>
+  <dt>Server Systems Engineer</dt>
+  <dd>Epic</dd>
+  <dd>Designed and maintained high-performance databases for medical records</dd>
+  <dd>Advised customers on system monitoring and scalability</dd>
+</dl>
+
+<dl>
+  <dt>Research Assistant</dt>
+  <dd>UW–Madison</dd>
+  <dd>2007–2012</dd>
+  <dd>Member of the CMS collaboration (3000+ physicists) at the Large Hadron Collider (LHC), Geneva, Switzerland</dd>
+  <dd>Made significant independent contributions to a 10-member global (U.S., Switzerland, Croatia) analysis team as the sole UW collaborator</dd>
+  <dd>Designed analysis and validation software in C++ and Python (see Programming Experience)</dd>
+  <dd>Presented weekly analysis reviews in PowerPoint to group of 10+ people and occasionally to wider CMS groups via video conference</dd>
+</dl>
+
+<dl>
+  <dt>Lecturer</dt>
+  <dd>UW–Whitewater</dd>
+  <dd>2010–2011</dd>
+  <dd>Instructor of record for three sections of a tutorial-based introductory physics course for education majors and one section of a traditional algebra-based introductory course</dd>
+  <dd>Used online learning management system, online homework engine, and electronic response system</dd>
+  <dd>Highly rated in student evaluations (avg. 4.8/5.0)</dd>
+</dl>
+
+<dl>
+  <dt>Teaching Assistant</dt>
+  <dd>UW–Madison</dd>
+  <dd>2006, 2009</dd>
+  <dd>Facilitated discussion sections and lab exercises for first-semester introductory physics courses, both calculus and non-calculus based</dd>
+</dl>
+
+<h2 id="programming-experience">Programming Experience</h2>
+
+<dl>
+  <dt>Web Applications</dt>
+  <dd>Developed an internal Stack Overflow-style Q&amp;A site for Epic staff using Python/Django, based on the open source OSQA project</dd>
+  <dd>Monitored feedback to provide prompt fixes and feature enhancements to meet the needs of the user community</dd>
+</dl>
+
+<dl>
+  <dt>Muon Trigger Validation</dt>
+  <dd>Developed a suite of tools in C++ for testing trigger software critical to the collaboration, integrating it into the CMS software framework</dd>
+  <dd>Provided validation reports for weekly software releases</dd>
+  <dd>Diagnosed and resolved software issues in new releases</dd>
+  <dd>Extended the package’s capabilities on-demand to perform urgent studies of unexpected behavior</dd>
+</dl>
+
+<dl>
+  <dt>Physics Analysis Framework</dt>
+  <dd>Designed and maintained the C++ and Python tools used by a 10-member analysis team</dd>
+  <dd>Structured software for parallel analysis of terabyte-scale datasets on the global CMS computing grid</dd>
+  <dd>Wrote well-documented and readable code that could be understood and extended by others on the team</dd>
+</dl>
+
+<dl>
+  <dt>Muon Trigger Isolation Optimization</dt>
+  <dd>Used multivariate analysis in <a href="http://root.cern.ch">ROOT</a> to optimize isolation thresholds in the CMS muon trigger</dd>
+  <dd>Proposed modifications to the collaboration, laying groundwork for significant redesign of isolated triggers</dd>
+</dl>
+
+<dl>
+  <dt><a href="http://packages.python.org/rootplot/">RootPlot</a></dt>
+  <dd>http://packages.python.org/rootplot/</dd>
+  <dd>Created an open-source Python project providing tools to ease the process of producing high-quality output from ROOT</dd>
+  <dd>Managed contributions from an active user community</dd>
+  <dd>Developed a matplotlib interface for ROOT</dd>
+  <dd>Designed a flexible and intuitive command-line interface to generate images from <a href="http://root.cern.ch">ROOT</a> histograms, replacing common workflows relying on custom macros</dd>
+</dl>
+
+<dl>
+  <dt><a href="http://ndawe.github.com/rootpy/">RootPy</a></dt>
+  <dd>http://ndawe.github.com/rootpy/</dd>
+  <dd>Contributed to a more ambitious open-source project to extend the capabilities of <a href="http://root.cern.ch">ROOT</a>’s Python interface</dd>
+  <dd>Lead designer for the plotting and root2matplotlib modules</dd>
+  <dd>Developed documentation</dd>
+  <dd>Implemented unit tests</dd>
+</dl>
+
+<dl>
+  <dt><a href="http://jeff.klukas.net">jeff.klukas.net</a></dt>
+  <dd>Used as a testing ground for site design using modern web standards, font technologies, and design principles</dd>
+  <dd>Currently powered by Octopress, using Jekyll, HTML5, and SASS in an adaptive design, hosted on Github</dd>
+</dl>
+
+<h2 id="skills">Skills</h2>
+
+<dl>
+  <dt>Certifications</dt>
+  <dd>Junior level Linux certification (LPIC-101)</dd>
+  <dd>Certified in Caché system management for Epic installations</dd>
+</dl>
+
+<dl>
+  <dt>Global languages</dt>
+  <dd>English (native)</dd>
+  <dd>French (advanced)</dd>
+  <dd>German (novice)</dd>
+</dl>
+
+<dl>
+  <dt>Computer languages</dt>
+  <dd>Python</dd>
+  <dd>C++</dd>
+  <dd>UNIX shell scripting</dd>
+  <dd>HTML5/CSS3</dd>
+  <dd>TeX/LaTeX</dd>
+  <dd>M/MUMPS</dd>
+</dl>
+
+<dl>
+  <dt>Applications</dt>
+  <dd><a href="http://root.cern.ch">ROOT</a> (statistics software)</dd>
+  <dd>matplotlib</dd>
+  <dd>CVS/Subversion/Git/Mercurial</dd>
+  <dd>Sphinx</dd>
+</dl>
+
+<dl>
+  <dt>Operating systems</dt>
+  <dd>Scientific Linux</dd>
+  <dd>AIX</dd>
+  <dd>HP-UX</dd>
+  <dd>Mac OS X</dd>
+  <dd>Windows</dd>
+</dl>
+
+<h2 id="grants-honors-certificates--awards">Grants, Honors, Certificates, &amp; Awards</h2>
+
+<dl>
+  <dt>Young Scientist Communication Grant</dt>
+  <dd>2012</dd>
+  <dd>Awarded to participants at the 2011 US LHC Users’ Organization Annual Meeting to graduate students whose talks showed exceptional ability to communicate with the public</dd>
+  <dd>Traveled with senior scientists on an annual trip to Washington, D.C. to speak with members of Congress about funding for science</dd>
+</dl>
+
+<dl>
+  <dt>CIRTL Network Exchange Fellow</dt>
+  <dd>2010</dd>
+  <dd>Traveled to UC–Boulder to present research work in both teaching and physics</dd>
+  <dd>Funded by the Center for Integration of Research, Teaching, &amp; Learning</dd>
+</dl>
+
+<dl>
+  <dt>Vilas Travel Grant</dt>
+  <dd>2009</dd>
+  <dd>UW–Madison</dd>
+  <dd>Awarded for travel to the CERN laboratory in Geneva, Switzerland</dd>
+</dl>
+
+<dl>
+  <dt>Delta Certificate in Research, Teaching, &amp; Learning</dt>
+  <dd>2009</dd>
+  <dd>UW–Madison</dd>
+  <dd>Recognizing experience in educational research and knowledge of foundational scholarship on teaching and learning</dd>
+</dl>
+
+<dl>
+  <dt>Emanuel R. Piore Award</dt>
+  <dd>2007</dd>
+  <dd>UW–Madison</dd>
+  <dd>Recognizing top score on the physics graduate qualifying exam</dd>
+</dl>
+
+<h2 id="selected-publications">Selected Publications</h2>
+
+<dl>
+  <dt>Search for exotic particles decaying to the WZ final state with the CMS Experiment</dt>
+  <dd>The CMS Collaboration</dd>
+  <dd>2012</dd>
+  <dd><em>Pending collaboration approval for submission to Physical Review Letters</em></dd>
+</dl>
+
+<dl>
+  <dt>Search for W’ (or techni-rho) to WZ</dt>
+  <dd>The CMS Collaboration</dd>
+  <dd>CMS Physics Analysis Summary <a href="http://cdsweb.cern.ch/record/1377329">CMS-PAS-EXO-11-041</a></dd>
+  <dd>2011</dd>
+</dl>
+
+<dl>
+  <dt>Measurement of the WW, WZ, and ZZ cross sections at CMS</dt>
+  <dd>The CMS Collaboration</dd>
+  <dd>CMS Physics Analysis Summary <a href="http://cdsweb.cern.ch/record/1370067">CMS-PAS-EXP-11-010</a></dd>
+  <dd>2011</dd>
+</dl>
+
+<dl>
+  <dt>Search for Technicolor with the CMS experiment</dt>
+  <dd>The CMS Collaboration</dd>
+  <dd>CMS Physics Analysis Summary <a href="http://cdsweb.cern.ch/record/1194502">CMS-PAS-EXO-09-007</a></dd>
+  <dd>2009</dd>
+</dl>
+
+<dl>
+  <dt>Connectivity and dynamics in local cortical networks</dt>
+  <dd>John Beggs, Jeffrey Klukas, and Wei Chen</dd>
+  <dd>In <em>Handbook of Brain Connectivity</em>, pages 91–116</dd>
+  <dd>Springer Berlin / Heidelberg</dd>
+  <dd>2007</dd>
+</dl>
+
+<p>Full high-energy physics publication list (100+): <a href="http://inspirehep.net/search?p=find+a+klukas">http://inspirehep.net/search?p=find+a+klukas</a></p>
+
+<h2 id="talks">Talks</h2>
+
+<dl>
+  <dt>Diboson Studies Performed with the CMS Detector</dt>
+  <dd>Jeff Klukas</dd>
+  <dd>US LHC Users’ Organization Annual Meeting</dd>
+  <dd>5 November 2011</dd>
+</dl>
+
+<dl>
+  <dt>Computing at the Large Hadron Collider</dt>
+  <dd>Jeff Klukas</dd>
+  <dd>CHTC Showcase (Center for High Throughput Computing at UW–Madison)</dd>
+  <dd>6 October 2011</dd>
+</dl>
+
+<dl>
+  <dt>Searches for New Physics with the Large Hadron Collider</dt>
+  <dd>Jeff Klukas</dd>
+  <dd>Invited talk for the UW–Whitewater Physics Seminar series</dd>
+  <dd>19 November 2010</dd>
+</dl>
+
+<h2 id="other-teaching-experience">Other Teaching Experience</h2>
+
+<dl>
+  <dt>MCAT Preparation Instructor</dt>
+  <dd>UW–Madison</dd>
+  <dd>2009–2010</dd>
+  <dd>Developed, managed, and taught a 30-hour module for a class of 20 pre-med students</dd>
+</dl>
+
+<dl>
+  <dt>Teaching Workshop Developer</dt>
+  <dd>UW–Madison</dd>
+  <dd>2007–2009</dd>
+  <dd>Co-developed with Prof. Michael Winokur a training workshop to orient teaching assistants to use active techniques in their discussion sections</dd>
+</dl>
+
+<dl>
+  <dt>Teaching Assistant</dt>
+  <dd>UW–Madison</dd>
+  <dd>2006, 2009</dd>
+  <dd>Facilitated discussion sections and lab exercises for first-semester introductory physics courses, both calculus and non-calculus based</dd>
+</dl>
+
+<dl>
+  <dt>Physics &amp; Mathematics Tutor</dt>
+  <dd>Naval ROTC, UW–Madison</dd>
+  <dd>2007-2009</dd>
+  <dd>Highly rated among students for drop-in tutoring six hours a week for all levels of physics and math</dd>
+</dl>
+
+<dl>
+  <dt>Tutor</dt>
+  <dd>Wittenberg University</dd>
+  <dd>2004–2006</dd>
+  <dd>Drop-in tutoring in both physics and French</dd>
+</dl>
+
+<dl>
+  <dt>Writing Advisor</dt>
+  <dd>Wittenberg University</dd>
+  <dd>2004-2006</dd>
+  <dd>Nominated by faculty and trained in techniques for one-on-one tutoring. The Writing Workshop is an integral part of the English program and a resource widely used for work in other departments across the curriculum</dd>
+</dl>
+
+<h3 id="teaching-workshops">Teaching Workshops</h3>
+
+<dl>
+  <dt>Forum of the Center for the Integration of Research, Teaching, and Learning</dt>
+  <dd>UW–Madison</dd>
+  <dd>2011</dd>
+  <dd>Two-day workshop focused on approaches to preparation of the nation’s future faculty</dd>
+</dl>
+
+<dl>
+  <dt>Opening Workshop for New STEM Educators</dt>
+  <dd>Marshfield, Wisconsin</dd>
+  <dd>2010</dd>
+  <dd>Attendance funded through UW–Whitewater</dd>
+  <dd>Two-day workshop focused on promoting strategies for active learning associated with increased success for members of underrepresented groups</dd>
+</dl>
+
+<dl>
+  <dt>Teaching &amp; Learning Symposium</dt>
+  <dd>UW–Madison</dd>
+  <dd>2010</dd>
+  <dd>Two-day workshop focused on sharing best practices for teaching and enriching the UW–Madison learning experience</dd>
+</dl>
+
+<dl>
+  <dt>Teaching and Assessing Student Abilities Workshop</dt>
+  <dd>Alverno College, Milwaukee, Wisconsin</dd>
+  <dd>2009</dd>
+  <dd>Attendance invited through CIRTL</dd>
+  <dd>Day-long workshop investigating Alverno’s abilities-based curriculum</dd>
+</dl>
+
+<h3 id="teaching-presentations">Teaching Presentations</h3>
+
+<dl>
+  <dt>Panel Discussion, Meeting of the International Society for the Scholarship of Teaching &amp; Learning</dt>
+  <dd>Don Gillian-Daniel, Bob Mathieu, Mark Connoly, Jeff Klukas, and Adam Hoffman</dd>
+  <dd>Participated in a panel discussing the approach and experience of UW–Madison’s Delta program</dd>
+  <dd>22 October, 2011</dd>
+</dl>
+
+<dl>
+  <dt>Delta Teaching &amp; Learning Philosophy Workshop</dt>
+  <dd>Don Gillian-Daniel and Jeff Klukas</dd>
+  <dd>Co-facilitated workshop for grads and postdocs preparing for the teaching job market</dd>
+  <dd>30 September, 2011</dd>
+</dl>
+
+<dl>
+  <dt>Poster, CIRTL Forum 2008: Aligning the Preparation of Graduate Students for STEM Early Faculty Careers</dt>
+  <dd>Jeff Klukas and Michael Winokur</dd>
+  <dd>Presented poster showcasing cooperative group learning workshop</dd>
+  <dd>16 June 2008</dd>
+</dl>
+
+<dl>
+  <dt>Poster, UW–Madison Teaching and Learning Symposium Showcase</dt>
+  <dd>Jeff Klukas and Michael Winokur</dd>
+  <dd>Presented poster showcasing cooperative group learning workshop</dd>
+  <dd>22 May 2008</dd>
+</dl>
+
+<dl>
+  <dt>TA Training Workshop</dt>
+  <dd>Jeff Klukas</dd>
+  <dd>UW–Madison Physics Department</dd>
+  <dd>Facilitated an original workshop for all new physics TAs on how to successfully lead cooperative group work</dd>
+  <dd>August 2007 &amp; August 2008</dd>
+  <dd>Adapted the same workshop for TAs across the STEM fields for the UW–Madison Engineering Teaching Improvement Program</dd>
+  <dd>January 2008 &amp; January 2009</dd>
+</dl>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Teaching]]></title>
+    <link href="http://jeff.klukas.net/teaching"/>
+    <updated>2011-12-31T00:00:00-05:00</updated>
+    <id>http://jeff.klukas.net/teaching</id>
+    <content type="html"><![CDATA[<h2 id="courses">Courses</h2>
+
+<h3 id="physics-for-elementary-teachers">Physics for Elementary Teachers</h3>
+<p>An introductory course built around a student-oriented pedagogy where almost all the course concepts are developed through direct experimentation in groups.  It focuses on building a conceptual understanding of energy and forces and using those concepts as a framework for understanding gravity, magnetism, electricity, and light.   The course becomes particularly relevant for elemetary teachers through “Learning about Learning” activities where we observe and discuss the learning processes of elementary students.</p>
+
+<h3 id="physics-foundations">Physics Foundations</h3>
+<p>An overview of physics in one semester, covering a broad range of topics, from Newtonian mechanics to relativity and particles.  We use algebra to develop a quantitative understanding of the topics and laboratory activities to explore a few of them in greater depth.</p>
+
+<!-- more -->
+
+<h3 id="how-to-facilitate-cooperative-group-learning">How to Facilitate Cooperative Group Learning?</h3>
+
+<div class="imgcontainer">
+<iframe width="420" height="315" src="http://www.youtube.com/embed/YnHl2rjloqo" frameborder="0" allowfullscreen=""></iframe>
+<p>video developed for the CGL training workshop</p>
+</div>
+
+<p>The physics education literature has repeatedly demonstrated the
+effectiveness of active leaning techniques over traditional
+lecture-based teaching. One active learning strategy currently gaining
+popularity at the University of Wisconsin is the use of cooperative
+group work in discussion sections. To encourage adoption and increase
+effectiveness, however, teaching assistants must have some training to
+understand the benefits of group work and to develop a sense of how
+best to design activities to capitalize on the social aspects of group
+work.</p>
+
+<p>In response to this need, we have developed a workshop for TAs on
+cooperative groups.  In the workshop, we establish the benefits of
+active learning techniques through a review of literature and
+introductory exercises that expose the participants’ own abilities to
+learn without understanding.  We then address several practical and
+social obstacles to leading a successful group work session through a
+video presentation and role-playing activity where participants must
+resolve simulated problems in the group-based classroom.  Throughout,
+we rely on small group discussions among the participants to model the
+approach we are presenting and to capitalize on the diversity of
+experience that the participants bring to the workshop.</p>
+
+<h3 id="workshop-materials">Workshop Materials</h3>
+<p>Watch the video <a href="http://youtube.com/watch?v=YnHl2rjloqo">“Cooperative Group Work in the Field” on YouTube</a> (embedded above).</p>
+
+<h3 id="resources">Resources</h3>
+<p><a href="http://stemvideos.colorado.edu/">Videos from the University of Colorado Science Education Initiative</a></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Safe Migrations with Redshift - Jeff Klukas</title>
+  <meta name="author" content="Jeff Klukas">
+
+  
+  <meta name="description" content="This post originally appeared on the Simple Engineering Blog. Simple has adopted Amazon Redshift
+as a data warehouse. It’s used not just by our data &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://jeff.klukas.net/content/2015/04/07/safe-migrations-with-redshift/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Jeff Klukas" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+<link href="http://fonts.googleapis.com/css?family=Cabin+Sketch:bold" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Cabin:regular,regularitalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" type="text/css">
+
+<!--Font Awesome-->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<!--MathJax-->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
+              processEscapes: true}
+  });
+</script>
+<script type="text/javascript"
+  src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Jeff Klukas</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS"><i class="fa fa-rss fa-lg"></i></a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="jeff.klukas.net">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/archives">Posts</a></li>
+  <li><a href="/bio">Bio</a></li>
+  <li><a href="/categories/writing">Writing</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Safe Migrations with Redshift</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-04-07T11:54:12-04:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>11:54 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><em>This post originally appeared on the <a href="https://www.simple.com/engineering/safe-migrations-with-redshift">Simple Engineering Blog</a>.</em></p>
+
+<p>Simple has adopted <a href="https://aws.amazon.com/redshift/">Amazon Redshift</a>
+as a data warehouse. It’s used not just by our data analysts, but by
+teams throughout the company to answer questions about
+fraud, customer behavior, and more.</p>
+
+<!-- more -->
+
+<h3 id="simples-analytics-infrastructure">Simple’s Analytics Infrastructure</h3>
+
+<p>A year ago, many business intelligence questions at Simple
+could only be answered via direct access to production databases.
+Aside from the difficulty that presented from a security and
+access standpoint, the inability to aggregate information
+from disparate data sources
+tied our hands in terms of the depth of insights we could achieve.</p>
+
+<p>The need for a data warehouse was clear.
+We chose Redshift as our warehouse for ease of use, scalability,
+and cost. It also integrates well with our existing platform,
+which runs largely on AWS.</p>
+
+<p>We have built our pipelines to Redshift such that
+updates are pushed in real time rather than pulled nightly
+as in a traditional ETL (extract, transform, load) process.
+As such, our warehouse is never static and
+<a href="https://docs.aws.amazon.com/redshift/latest/dg/performing-a-deep-copy.html">Redshift’s documented approaches to deep copies</a>
+needed some customization.
+In order to retain updates while recreating tables,
+we had to dive deep into the documentation, do some experimentation,
+and finally make some compromises in terms of warehouse availability.</p>
+
+<h3 id="the-need-for-deep-copies">The Need for Deep Copies</h3>
+
+<p>Although Redshift presents a client interface that mimics PostgreSQL,
+operational details make the experience of managing a Redshift cluster
+very different from a traditional SQL database.
+One management struggle that we’ve dealt with is the need to perform
+deep copies of tables for certain structural changes.
+Redshift supports <code>ALTER TABLE</code>
+statements to change ownership and add/drop columns,
+but other important changes require tearing the table down and starting over.</p>
+
+<p>As we have gained operational experience both with Redshift and
+and with our own data usage patterns,
+we have in several cases needed to change
+<a href="https://docs.aws.amazon.com/redshift/latest/dg/c_best-practices-best-dist-key.html">distribution styles</a>
+which determine where data lives within a cluster and
+<a href="https://docs.aws.amazon.com/redshift/latest/dg/c_best-practices-sort-key.html">sort keys</a>
+which are akin to database indexes.
+Because these two properties cannot be altered, we have had to learn
+how to efficiently copy data to a new table and swap it with the original.</p>
+
+<h3 id="can-schema-changes-and-transactions-mix">Can Schema Changes and Transactions Mix?</h3>
+
+<p>Simple’s backend engineering team uses <a href="http://flywaydb.org/">Flyway</a>
+to perform migrations on PostgreSQL databases, and our data engineers
+have followed suit for maintaining our schema in Redshift.
+Flyway automatically wraps every migration in a transaction
+so that when a single statement fails, the entire migration can be rolled back.
+As discussed in the
+<a href="http://flywaydb.org/documentation/faq.html#rollback">Flyway FAQ</a>,
+however, not all databases agree about how to handle DDL statements
+(like creating, dropping, and renaming tables) within transactions:</p>
+
+<blockquote>
+  <p>Today only DB2, PostgreSQL, Derby and to a certain extent SQL Server support DDL statements inside a transaction. Other databases such as Oracle will implicitly sneak in a commit before and after each DDL statement, drastically reducing the effectiveness of this roll back. One alternative if you want to work around this, is to include only a single DDL statement per migration. This solution however has the drawback of being quite cumbersome.</p>
+</blockquote>
+
+<p>Redshift doesn’t wrap DDL statements with implicit commits,
+so rolling back a failed transaction <em>is</em> possible
+even when it has made changes to the database schema.
+But how do concurrent transactions behave
+while these schema changes are in progress?
+Amazon’s documentation on
+<a href="https://docs.aws.amazon.com/redshift/latest/dg/c_serial_isolation.html">serializable isolation in Redshift</a>
+discusses how write locks are used during concurrent transactions to protect
+data integrity and gives us a hint about how DDL statements are handled:</p>
+
+<blockquote>
+  <p>System catalog tables (PG) and other Amazon Redshift system tables (STL and STV) are not locked in a transaction; therefore, changes to database objects that arise from DDL and TRUNCATE operations are visible on commit to any concurrent transactions.</p>
+</blockquote>
+
+<p>By rolling up our sleeves and experimenting with the sequencing
+of statements within a migration, we were able
+to develop a more concrete understanding of how write locks and DDL
+operations are applied.</p>
+
+<h3 id="safely-recreating-a-table">Safely Recreating a Table</h3>
+
+<p>Let’s discuss two examples using the “<code>tickit</code>” database from Redshift’s
+<a href="https://docs.aws.amazon.com/redshift/latest/dg/c_intro_to_admin.html">Getting Started Guide</a>.</p>
+
+<p>Here’s a great way to lose data during a migration (remember that Flyway
+automatically wraps this in a transaction):</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+</pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="c1">-- potential data loss</span>
+</span><span class="line"><span class="c1">-- you probably don&#39;t want to do this</span>
+</span><span class="line"><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">sales_copy</span> <span class="k">AS</span> <span class="p">(</span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">sales</span><span class="p">);</span>
+</span><span class="line"><span class="k">DROP</span> <span class="k">TABLE</span> <span class="n">sales</span><span class="p">;</span>
+</span><span class="line"><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">sales_copy</span> <span class="k">RENAME</span> <span class="k">TO</span> <span class="n">sales</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>During the creation of <code>sales_copy</code>, the original <code>sales</code> table is fully
+available to other processes for reads and writes.
+As soon as the <code>DROP TABLE</code> statement is executed, however, Redshift places
+a lock on <code>sales</code> and all new queries that touch the <code>sales</code> table will
+block until the transaction finishes.
+If either the <code>DROP TABLE</code> or <code>ALTER TABLE</code> commands fail,
+the transaction is rolled back cleanly since the DDL changes
+were never made visible to any other processes.</p>
+
+<p>The above migration is only dangerous if it succeeds:
+when the transaction commits,
+the original table is dropped along with all updates.
+By the time the read/write lock is put in place,
+other processes may have already made updates to <code>sales</code>.
+Because those updates aren’t visible within our transaction,
+they never make it into <code>sales_copy</code>.</p>
+
+<p>Our solution was to change the order of operations so that
+the first line of the migration is a DDL statement affecting <code>sales</code>,
+ensuring that reads and writes to that table are blocked immediately.
+The lock persists all the way through transaction commit,
+when the transaction’s schema changes are finally made visible to other processes.
+Placing that lock at the beginning of the transaction means
+a longer period during which the table is unavailable for queries,
+but we judge that a small price to pay for integrity of the warehouse.
+To minimize the duration of the outage,
+we follow the advice of the Flyway maintainers and modify
+only a single table per migration.</p>
+
+<p>Our table recreation strategy now looks like this:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+</pre></td><td class="code"><pre><code class="sql"><span class="line"><span class="c1">-- a safer sequencing of events</span>
+</span><span class="line"><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">sales</span> <span class="k">RENAME</span> <span class="k">TO</span> <span class="n">sales_old</span><span class="p">;</span>
+</span><span class="line"><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">sales</span> <span class="k">AS</span> <span class="p">(</span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">sales_old</span><span class="p">);</span>
+</span><span class="line"><span class="k">DROP</span> <span class="k">TABLE</span> <span class="n">sales_old</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h3 id="tooling-for-redshift">Tooling for Redshift</h3>
+
+<p>Three lines of SQL is fairly easy to write by hand and makes for a
+perfectly sufficient migration when you simply need to clean up
+a table with too many columns to support a <code>VACUUM</code> operation.
+The process becomes significantly more complex when you want to
+change distribution or sort keys.</p>
+
+<p>We are still building out our toolset to make
+performing these sorts of maintenance tasks easier, and we look
+forward to providing many of those tools to the community as open
+source projects. We recently released
+<a href="https://github.com/SimpleFinance/pipewelder">Pipewelder</a>,
+a framework for defining scheduled tasks under version control
+and deploying them via <a href="https://aws.amazon.com/datapipeline/">AWS Data Pipeline</a>.
+We have deployed Pipewelder both to handle nightly <code>VACUUM</code> operations
+and to create hourly derived tables, which we use to mimic materialized views.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Jeff Klukas</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2015-04-07T11:54:12-04:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>11:54 am</span></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://jeff.klukas.net/content/2015/04/07/safe-migrations-with-redshift/" data-via="jeffklukas" data-counturl="http://jeff.klukas.net/content/2015/04/07/safe-migrations-with-redshift/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/content/2015/03/30/band-aids/" title="Previous Post: Band-Aids">&laquo; Band-Aids</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+  <div id="twitter-profile" style="margin-top:0.5em;">
+    <img class="right" src="/images/jeff184.jpg" style="width:80px; height:80px;">
+  </div>
+  <p>Teacher, physicist, computer jockey, dad. Helped find the Higgs particle. Now building data systems <a href="https://twitter.com/simple">@simple</a>.</p>
+</section>
+<section>
+  <h1>Contact</h1>
+  <ul>
+    <li><i class="fa fa-envelope-square"></i> <a href='ma&#105;l&#116;&#111;&#58;%6&#65;ef%&#54;6%40k%6Cu%6&#66;as&#46;&#110;%65t'>j&#101;ff&#64;&#107;luka&#115;&#46;net</a> (email)</li>
+    <li><i class="fa fa-skype"></i> <a href="skype:jeffklukas?call">jeffklukas</a> (Skype)</li>
+    <li><i class="fa fa-facebook-square"></i> <a href="http://www.facebook.com/jklukas">jklukas</a> (Facebook)</li>
+    <li><i class="fa fa-linkedin-square"></i> <a href="http://www.linkedin.com/profile/view?id=175583870">jklukas</a> (LinkedIn)</li>
+    <li><i class="fa fa-github-square"></i> <a href="https://github.com/jklukas">jklukas</a> (GitHub)</li>
+    <li><i class="fa fa-twitter-square"></i> <a href="https://twitter.com/JeffKlukas">@JeffKlukas</a> (Twitter)</li>
+    <li><i class="fa fa-google-plus-square"></i> <a href="https://plus.google.com/113614530826956763926?rel=author">jeff.klukas</a> (Google)</li>
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/jeffklukas" data-widget-id="580918737932419072">Tweets by @jeffklukas</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </ul>
+  
+    <p>Follow <a href="http://twitter.com/jeffklukas">@jeffklukas</a></p>
+  
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/jklukas">@jklukas</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'jklukas',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus googleplus-hidden">
+  <h1>
+    <a href="https://plus.google.com/Jeff Klukas?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 &middot Jeff Klukas &middot
+  <a href="/colophon">Colophon</a> &middot
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'jeffklukas';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://jeff.klukas.net/content/2015/04/07/safe-migrations-with-redshift/';
+        var disqus_url = 'http://jeff.klukas.net/content/2015/04/07/safe-migrations-with-redshift/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

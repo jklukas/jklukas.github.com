@@ -1,0 +1,530 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Jeff Klukas</title>
+  <meta name="author" content="Jeff Klukas">
+
+  
+  <meta name="description" content="The LHC is currently running at 7 TeV, giving a relativistic gamma factor $\gamma$ of 3730: This means the protons are moving at 99.999996% the speed &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://jeff.klukas.net/posts/2/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Jeff Klukas" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+<link href="http://fonts.googleapis.com/css?family=Cabin+Sketch:bold" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Cabin:regular,regularitalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" type="text/css">
+
+<!--Font Awesome-->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<!--MathJax-->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
+              processEscapes: true}
+  });
+</script>
+<script type="text/javascript"
+  src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Jeff Klukas</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS"><i class="fa fa-rss fa-lg"></i></a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="jeff.klukas.net">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/archives">Posts</a></li>
+  <li><a href="/bio">Bio</a></li>
+  <li><a href="/categories/writing">Writing</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/content/2012/01/03/lhc-parameters/">Some LHC Calculations</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2012-01-03T00:00:00-05:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>3</span><span class='date-suffix'>rd</span>, <span class='date-year'>2012</span></span> <span class='time'>12:00 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The LHC is currently running at 7 TeV, giving a relativistic gamma factor $\gamma$ of 3730:</p>
+
+<script type="math/tex; mode=display">E = \gamma mc^2 \rightarrow \gamma = {E \over mc^2} \rightarrow \gamma(3.5\text{TeV}) = 3730</script>
+
+<p>This means the protons are moving at 99.999996% the speed of light:</p>
+
+<script type="math/tex; mode=display">\gamma = {1 \over \sqrt{1 - \beta^2}} \rightarrow \beta = \sqrt{1 - {1 \over \gamma^2}} \approx 0.99999996</script>
+
+<p>Alright, now let’s look at the collision rate, assuming a recent luminosity of 1e33:</p>
+
+<script type="math/tex; mode=display">R_\text{total} = \mathcal{L} \sigma = (10^{33} {\text{cm}^{-2} \over \text{s}})(110\text{mb})({10^{-27}\text{cm}^2 \over \text{mb}})</script>
+
+<p>which gives approximately 100 million interactions per second.</p>
+
+<p>The cross section for the events I’m looking at is $\sigma_{WZ\rightarrow 3\ell\nu} \approx 0.5 \text{pb}$, so</p>
+
+<script type="math/tex; mode=display">R(WZ\to 3\ell\nu) = (10^{33} {\text{cm}^{-2} \over \text{s}})(0.5\text{pb})({10^{-36}\text{cm}^2 \over \text{mb}})</script>
+
+<p>yielding 0.0005 Hz or 40 <em>WZ</em> events per day.</p>
+
+<p>So how many of these events will we have collected by the end of the 2011 pp run?</p>
+
+<script type="math/tex; mode=display">N_{WZ\rightarrow 3\ell\nu} \approx (5 {\text{fb}^{-1}}) (0.5 \text{pb}) = \text{2500 events}</script>
+
+<p>By the time we make all the required cuts to account for the acceptance of the detector and rejection of backgrounds, however, we end up with something on the order of only 100 events in our final sample.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/colophon">Colophon</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2011-12-31T20:53:00-05:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2011</span></span> <span class='time'>8:53 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This site is built on <a href="http://octopress.org">Octopress</a>, “a blogging framework for hackers,” which brings a number of fun technologies along for the ride, including:</p>
+
+<ul>
+  <li><a href="http://jekyllrb.com">Jekyll</a> as the base platform for generating a static blog,</li>
+  <li>modern design using all the best that HTML5 and CSS3 have to offer,</li>
+  <li>the <a href="http://modernizr.com/">Modernizr</a> JS library to allow for graceful degradation on older browsers,</li>
+  <li>a responsive, mobile-first page design (try resizing the browser window to see what happens), and</li>
+  <li>scripts to automate deployment to GitHub Pages.</li>
+</ul>
+
+<p>On top of Octopress, I threw in some extra goodies:</p>
+
+<ul>
+  <li>A retina-ready design with CSS3 gradients, scalable icons from FontAwesome and images included at 2x whenever possible so that the page looks as crisp as possible on recent iPhones and iPads, plus</li>
+  <li><a href="http://www.mathjax.org/">MathJax</a> for rendering of LaTeX equations in HTML.</li>
+</ul>
+
+<p>Check out the <a href="https://github.com/jklukas/jklukas.github.com">site’s source</a> on GitHub.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/bio">Bio</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2011-12-31T20:53:00-05:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2011</span></span> <span class='time'>8:53 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class="imgcontainer">
+<iframe style="width: 100%; height: 20.5em; margin: 0.25em 0;" scrolling="no" src="http://maps.google.com/maps/ms?ie=UTF8&amp;t=h&amp;msa=0&amp;msid=201747899667285679972.0004a4bade8b09a0fa795&amp;ll=36.879621,-34.804687&amp;spn=55.146624,164.882813&amp;z=2&amp;output=embed"></iframe>
+<p>places I&#8217;ve lived</p>
+</div>
+
+<p>Although I’m actually an Ohio native, I grew up in the South Hills of Pittsburgh (which, make no mistake, is <a href="http://en.wikipedia.org/wiki/Midwestern_United_States#Cultural_overlap">a Midwestern city</a> despite being in Pennsylvania).  My parents, who grew up as good Lutheran kids, met in college at <a href="http://www.wittenberg.edu">Wittenberg University</a>, and both their kids ended up following suit.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/bio">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/cv">Curriculum Vitae</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2011-12-31T02:53:00-05:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2011</span></span> <span class='time'>2:53 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2 id="education">Education</h2>
+
+<dl>
+  <dt>Ph.D. (Physics) University of Wisconsin–Madison</dt>
+  <dd>May 2012</dd>
+  <dd>Advisor: Matt Herndon</dd>
+  <dd>Thesis topic: A search for exotic particles decaying to <em>WZ</em> in <em>pp</em> collisions at 7 TeV</dd>
+</dl>
+
+<dl>
+  <dt>B.S. Wittenberg University</dt>
+  <dd>Springfield, Ohio</dd>
+  <dd>May 2006</dd>
+  <dd>Majors in physics and French language &amp; literature</dd>
+  <dd>Summa Cum Laude</dd>
+  <dd>Departmental honors in physics</dd>
+  <dd>Thesis topic: Influencing dynamics in neural networks</dd>
+</dl>
+
+<dl>
+  <dt>School for International Training</dt>
+  <dd>Dakar, Senegal, West Africa</dd>
+  <dd>Spring 2005</dd>
+  <dd>Conducted independent research on the relative importance of national, ethnic, socioeconomic, and gender identities to residents of Dakar through interviews and participant observation.</dd>
+</dl>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/cv">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/teaching">Teaching</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2011-12-31T00:00:00-05:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2011</span></span> <span class='time'>12:00 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2 id="courses">Courses</h2>
+
+<h3 id="physics-for-elementary-teachers">Physics for Elementary Teachers</h3>
+<p>An introductory course built around a student-oriented pedagogy where almost all the course concepts are developed through direct experimentation in groups.  It focuses on building a conceptual understanding of energy and forces and using those concepts as a framework for understanding gravity, magnetism, electricity, and light.   The course becomes particularly relevant for elemetary teachers through “Learning about Learning” activities where we observe and discuss the learning processes of elementary students.</p>
+
+<h3 id="physics-foundations">Physics Foundations</h3>
+<p>An overview of physics in one semester, covering a broad range of topics, from Newtonian mechanics to relativity and particles.  We use algebra to develop a quantitative understanding of the topics and laboratory activities to explore a few of them in greater depth.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/teaching">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/content/2006/04/03/influencing-dynamics-in-neural-networks/">Influencing Dynamics in Neural Networks</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2006-04-03T00:00:00-04:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>3</span><span class='date-suffix'>rd</span>, <span class='date-year'>2006</span></span> <span class='time'>12:00 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This research was performed under an NSF-funded Research Experience for Undergraduates program at Indiana University and then extended at Wittenberg University to serve as an undergraudate honors thesis.  The work was overseen by John Beggs.  It was later published in the 2006 issue of Wittenberg University’s non-fiction literary magazine, <em>Spectrum</em>.</p>
+
+<p>Abstract: Experimental readings from rat cortex in our lab have demonstrated a robust ability of neural networks to maintain critical point dynamics. Whether that ability stems from the activity of a regulatory system or is an inherent property of the network, however, remains unknown. Throughout our investigations, a computational model has served both as a useful diagnostic tool in developing measurements of dynamics and as a predictor of manipulations to be in- vestigated in tissue samples. It demonstrates a robustness similar to the biological samples, suggesting that the network structure alone may be sufficient to maintain stable dynamics. Using the model to explore network parameters, we have identified the distribution of connection strengths between nodes in the network as having a clear influence on the dynamical behavior of the system, and further, we have explained deviations from that relationship by identifying particular connection patterns that link attractive behavior with an inverse branching structure.</p>
+
+<p>View the full text of <a href="/files/klukas-undergrad-thesis.pdf">“Influencing Dynamics in Neural Networks” in PDF format</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/content/2005/05/12/isp/">Changing Concepts of Ethnic and National Identity in Dakar</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2005-05-12T00:00:00-04:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2005</span></span> <span class='time'>12:00 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This research was performed as a capstone project for the <em>Senegal: Arts &amp; Culture</em> academic program of the School for International Training in Spring of 2005 under the direction of Souleye Diallo.  The project was advised by Mamadou Aliou Diallo, Université Cheikh Anta Diop.  It was published in the 2006 issue of Wittenberg University’s non-fiction literary magazine, <em>Spectrum</em>.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/content/2005/05/12/isp/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/index.html">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+  <div id="twitter-profile" style="margin-top:0.5em;">
+    <img class="right" src="/images/jeff184.jpg" style="width:80px; height:80px;">
+  </div>
+  <p>Teacher, physicist, computer jockey, dad. Helped find the Higgs particle. Now building data systems <a href="https://twitter.com/simple">@simple</a>.</p>
+</section>
+<section>
+  <h1>Contact</h1>
+  <ul>
+    <li><i class="fa fa-envelope-square"></i> <a href='ma&#105;l&#116;&#111;&#58;%6&#65;ef%&#54;6%40k%6Cu%6&#66;as&#46;&#110;%65t'>j&#101;ff&#64;&#107;luka&#115;&#46;net</a> (email)</li>
+    <li><i class="fa fa-skype"></i> <a href="skype:jeffklukas?call">jeffklukas</a> (Skype)</li>
+    <li><i class="fa fa-facebook-square"></i> <a href="http://www.facebook.com/jklukas">jklukas</a> (Facebook)</li>
+    <li><i class="fa fa-linkedin-square"></i> <a href="http://www.linkedin.com/profile/view?id=175583870">jklukas</a> (LinkedIn)</li>
+    <li><i class="fa fa-github-square"></i> <a href="https://github.com/jklukas">jklukas</a> (GitHub)</li>
+    <li><i class="fa fa-twitter-square"></i> <a href="https://twitter.com/JeffKlukas">@JeffKlukas</a> (Twitter)</li>
+    <li><i class="fa fa-google-plus-square"></i> <a href="https://plus.google.com/113614530826956763926?rel=author">jeff.klukas</a> (Google)</li>
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/jeffklukas" data-widget-id="580918737932419072">Tweets by @jeffklukas</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </ul>
+  
+    <p>Follow <a href="http://twitter.com/jeffklukas">@jeffklukas</a></p>
+  
+</section>
+
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/jklukas">@jklukas</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'jklukas',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus googleplus-hidden">
+  <h1>
+    <a href="https://plus.google.com/Jeff Klukas?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 &middot Jeff Klukas &middot
+  <a href="/colophon">Colophon</a> &middot
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'jeffklukas';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
